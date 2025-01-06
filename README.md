@@ -1,6 +1,6 @@
 # Chrysanthemum: Generic Genetic Algorithm in Python
 
-A pure Python implementation of genetic algorithms with multiple crossovers, mutations and selection methods. Currently a WIP but examples for the knapsack problem and motif search problem are included. 
+A pure Python implementation of genetic algorithms with multiple crossovers, mutations and selection methods. Currently a WIP but examples for the knapsack problem, motif search problem and TSP are included. 
 
 Made to be easy to configure and modify for specific use cases. 
 
@@ -54,11 +54,11 @@ print(return_values[0].fitness)
 ```
 
 ## Next Steps
-- Add Permutation Crossovers and Mutations
-- Add Real-Value Mutations
-- Add Roulette Wheel and Rank Based Selection
-- Create Pre-Configured Settings
+- Add more permutation crossovers and mutations
+- Add real-value mutations
+- Add roulette wheel and rank based selection
+- Create pre-configured settings
 - Improve documentation
-- Add Multi-Objective Generic Genetic Algorithm (Potentially NSGA-II)
-- Package the Project, potentially, for PyPI
+- Add multi-objective generic genetic algorithm (potentially NSGA-II)
+- Package the project, potentially, for PyPI
 

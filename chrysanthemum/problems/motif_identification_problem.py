@@ -1,19 +1,21 @@
 import random
 
-DICT = ['A', 'C', 'G', 'T']
-
-def hamming_distance(text_a: str, text_b: str) -> int:
+def hamming_distance(text_a: list[str], text_b: str) -> int:
     counter = 0
     for item_index in range(len(text_a)):
-        if text_a[item_index] != text_b[item_index]:
+        #if text_a[item_index][0] == "|":
+        #    counter += 1
+        if text_b[item_index] not in text_a[item_index]:
             counter += 1
+            #if text_a[item_index][0] == "|":
+            #    counter += 1
     return counter
 
 def evaluate_motif_solution(problem: list[str], solution: list[str]) -> float:
     #Time complexity is an issue
     hamming_counter = 0
     solution_length = len(solution)
-    solution = ''.join(solution)
+    #solution = ''.join(solution)
     for string in problem:
         lowest_hamming_counter = 10**10
         for index in range(len(string)-solution_length+1):
@@ -29,6 +31,6 @@ def load_motif_problem(path: str) -> list[str]:
     data = data.splitlines()[1:]
     return data
 
-def motif_solution_generator(length: int) -> list[str]:
-    solution = [random.choice(DICT) for _ in range(length)]
+def motif_solution_generator(length: int, symbols: list[object]) -> list[str]:
+    solution = [random.choice(symbols) for _ in range(length)]
     return solution
